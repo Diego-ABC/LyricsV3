@@ -7,8 +7,8 @@ import {
   Landing,
   Resources,
   Settings,
-} from "..";
-import { LayoutWithNavBar } from "../layouts";
+} from "../pages";
+import { LayoutWithNavBar } from "./layouts";
 import {
   createBrowserRouter,
   createRoutesFromElements,
@@ -18,12 +18,12 @@ import {
 const Router = createBrowserRouter(
   createRoutesFromElements(
     <Route>
-      <Route path="/" element={<Landing />} />
+      {/* <Route path="/" element={<Landing />} /> */}
       <Route path="signup" element={<SignUp />} />
       <Route path="signin" element={<SignIn />} />
       <Route path="*" element={<NotFound />} />
-      <Route path="contactus" element={<ContactUs />} />
-      <Route path="dashboard" element={<LayoutWithNavBar />}>
+      {/* <Route path="contactus" element={<ContactUs />} /> */}
+      <Route path="/" element={<LayoutWithNavBar />}>
         <Route index element={<Home />} />
         <Route path="help" element={<Resources />} />
         <Route path="settings" element={<Settings />} />
